@@ -4,136 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BattleX - Free Fire Tournaments</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #111;
-            color: white;
-            overflow-x: hidden;
-        }
-        .navbar {
-            display: flex;
-            align-items: center;
-            padding: 10px 20px;
-            background: #222;
-        }
-        .navbar img {
-            height: 50px;
-        }
-        .banner {
-            position: relative;
-            text-align: center;
-            background: url('download.png') no-repeat center center/cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .banner-overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        .banner-content {
-            position: relative;
-            z-index: 2;
-        }
-        .banner h1 {
-            font-size: 36px;
-            font-weight: bold;
-        }
-        .banner p {
-            font-size: 18px;
-        }
-        .btn {
-            display: inline-block;
-            background: #ff5733;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            font-size: 20px;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-        .white-section {
-            background: white;
-            color: black;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .white-section h2 {
-            font-size: 32px;
-            font-weight: bold;
-        }
-        .white-section img {
-            width: 80%;
-            max-width: 500px;
-            margin-top: 20px;
-            animation: pop-in 1s ease-in-out;
-        }
-        .gray-section {
-            background: #333;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .feature {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-            gap: 15px;
-        }
-        .feature img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-        .footer {
-            background: black;
-            text-align: center;
-            padding: 20px;
-        }
-        .footer .btn {
-            animation: pop-in 1s ease-in-out;
-        }
-        @keyframes pop-in {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <img src="battlex.jpg.webp" alt="BattleX Logo">
+    <nav>
+        <img src="battlex.jpg.webp" alt="BattleX Logo" class="logo">
     </nav>
-    <div class="banner">
-        <div class="banner-overlay"></div>
-        <div class="banner-content">
+
+    <header class="banner">
+        <div class="overlay">
             <h1>Welcome to BattleX</h1>
             <p>Win real cash via playing mobile Free Fire tournaments</p>
-            <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn">Download Now</a>
+            <a href="#" class="glowing-button">Download Now</a>
         </div>
-    </div>
-    <div class="white-section">
-        <h2>App Interface</h2>
-        <p>Check the app interface below to get an idea of the app flow and features.</p>
-        <img src="interface.png" alt="App Interface">
-    </div>
-    <div class="gray-section">
-        <div class="feature"><img src="rupees.png" alt="Free Contest"> <p>Join contests for free as a launch offer.</p></div>
-        <div class="feature"><img src="giftbox.png" alt="Cash Prize"> <p>Compete with the best players in India and win cash prizes.</p></div>
-        <div class="feature"><img src="mans.png" alt="Gamer Profile"> <p>Showcase your skills and stats on your gamer profile.</p></div>
-        <div class="feature"><img src="chart.png" alt="Leaderboard"> <p>Check out the leaderboards of pro players.</p></div>
-        <div class="feature"><img src="play.png" alt="Fair Play"> <p>No Emulators, No Hackers - Fair Play Only.</p></div>
-        <div class="feature"><img src="share.png" alt="Share & Earn"> <p>Refer others and earn rewards.</p></div>
-    </div>
-    <footer class="footer">
-        <a href="https://api.whatsapp.com/send?phone=7550855283&text=Contact%20for%20help%20" class="btn">Contact Now</a>
-        <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn">Download Now</a>
+        <img src="download.png" alt="Banner Image">
+    </header>
+
+    <section class="white-section">
+        <div class="content">
+            <img src="interface.png" alt="App Interface" class="pop-in">
+            <div class="text">
+                <h2>Easy to Use & Free Contests</h2>
+                <p>Our app is designed for an amazing user experience with multiple sections and free contests.</p>
+                <a href="#" class="glowing-button">Download Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature"><img src="rupees.png" class="icon"> <p>Free Contests</p></div>
+        <div class="feature"><img src="giftbox.png" class="icon"> <p>Cash Prizes</p></div>
+        <div class="feature"><img src="mans.png" class="icon"> <p>Gamer Profile</p></div>
+        <div class="feature"><img src="chart.png" class="icon"> <p>Leader Boards</p></div>
+        <div class="feature"><img src="play.png" class="icon"> <p>Fair Play</p></div>
+        <div class="feature"><img src="share.png" class="icon"> <p>Share & Earn</p></div>
+    </section>
+
+    <section class="how-to-play">
+        <h2 class="slide-left">How To Play</h2>
+        <div class="container">
+            <div class="text slide-left">
+                <h3>Solo & Duo Mode</h3>
+                <p>Compete in solo or duo modes to win real cash.</p>
+            </div>
+            <img src="how to play.png" class="slide-right">
+        </div>
+    </section>
+
+    <section class="what-to-do">
+        <h2 class="slide-right">What To Do</h2>
+        <div class="container">
+            <img src="what to do.png" class="slide-left">
+            <div class="text slide-right">
+                <h3>Register & Play</h3>
+                <p>Create an account, deposit coins, and start playing.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="money-prizes">
+        <h2 class="slide-left">Money Prizes</h2>
+        <div class="container">
+            <div class="text slide-left">
+                <h3>Win & Withdraw</h3>
+                <p>Withdraw earnings via Paytm, UPI, or Google Play codes.</p>
+            </div>
+            <img src="money prize.png" class="slide-right">
+        </div>
+    </section>
+
+    <footer>
+        <a href="#" class="glowing-button pop-in">Download Now</a>
+        <p>Contact | About</p>
     </footer>
+
+    <style>
+        body { background-color: #222; color: white; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        nav .logo { width: 100px; margin: 10px; }
+        .banner { position: relative; text-align: center; color: white; }
+        .banner img { width: 100%; }
+        .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .glowing-button { background: orange; padding: 10px 20px; font-weight: bold; text-transform: uppercase; box-shadow: 0 0 15px orange; transition: 0.3s; }
+        .glowing-button:hover { box-shadow: 0 0 30px orange; }
+        .white-section { background: white; color: black; padding: 20px; text-align: center; }
+        .features { display: flex; flex-wrap: wrap; justify-content: space-around; padding: 20px; }
+        .feature { text-align: center; }
+        .icon { width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 0 10px white; }
+        .container { display: flex; align-items: center; justify-content: space-around; padding: 20px; }
+        img { max-width: 100%; }
+        .pop-in { animation: popIn 1s ease-in-out; }
+        .slide-left { animation: slideLeft 1s ease-in-out; }
+        .slide-right { animation: slideRight 1s ease-in-out; }
+
+        @keyframes popIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+        @keyframes slideLeft { from { opacity: 0; transform: translateX(-100px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes slideRight { from { opacity: 0; transform: translateX(100px); } to { opacity: 1; transform: translateX(0); } }
+    </style>
 </body>
 </html>
