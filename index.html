@@ -5,45 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BattleX - Free Fire Tournaments</title>
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #111;
+            background: url('battlex.jpg.webp') no-repeat center center fixed;
+            background-size: cover;
             color: white;
             padding: 20px;
+            position: relative;
         }
+
+        /* Dark Overlay for Readability */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Adjust transparency */
+            z-index: -1;
+        }
+
+        /* Content Box */
         .container {
             max-width: 600px;
             margin: auto;
-            background: #222;
+            background: rgba(0, 0, 0, 0.7); /* Slightly darker box */
             padding: 20px;
             border-radius: 10px;
+            position: relative;
+            z-index: 1;
         }
+
+        /* Button Style */
         .btn {
             display: inline-block;
             background: #ff5733;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
             font-size: 18px;
             border-radius: 5px;
-            margin-top: 10px;
+            margin-top: 15px;
+            transition: 0.3s ease-in-out;
         }
-        img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
+
+        .btn:hover {
+            background: #ff2a00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
         }
     </style>
 </head>
 <body>
+
+    <div class="overlay"></div> <!-- Dark Overlay for readability -->
+
     <div class="container">
         <h1>🔥 Welcome to BattleX 🔥</h1>
         <p>Join our Free Fire tournaments and win big prizes!</p>
         <p>We offer <strong>Solo, Duo, Squad & Custom Rooms</strong> with entry fees ranging from ₹10 to ₹100.</p>
-        <img src="your-image.jpg" alt="BattleX Tournament Image"> <!-- Replace with your image -->
-        <a href="#" class="btn">Download BattleX & Register</a>
+        
+        <!-- Updated Download Button -->
+        <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn" download>Download BattleX & Register</a>
+        
         <p>💬 <strong>24/7 Customer Support</strong> | 💯 <strong>Friendly Experience</strong></p>
     </div>
+
 </body>
 </html>
