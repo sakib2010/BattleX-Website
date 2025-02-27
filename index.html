@@ -5,82 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BattleX - Free Fire Tournaments</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             background-color: #111;
             color: white;
-            padding: 20px;
-            overflow-x: hidden;
+            text-align: center;
         }
-        .container {
-            max-width: 600px;
-            margin: auto;
+        .navbar {
             background: #222;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .banner {
+            background: url('download.png') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .banner::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .banner h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 28px;
         }
         .btn {
             display: inline-block;
             background: transparent;
+            border: 2px solid orange;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
             font-size: 18px;
             border-radius: 5px;
             margin-top: 10px;
-            border: 2px solid orange;
-            transition: transform 0.2s ease-in-out;
         }
-        .btn:hover {
-            transform: scale(1.1);
+        .white-section {
+            background: white;
+            color: black;
+            padding: 50px 20px;
         }
-        img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
+        .interface img {
+            width: 100%;
+            max-width: 400px;
+            animation: slideIn 1s ease-in-out;
         }
-        .animated-text {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s forwards;
+        @keyframes slideIn {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .features {
+            background: #333;
+            padding: 50px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .feature {
+            width: 300px;
+            margin: 15px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+        .feature img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="animated-text">🔥 Welcome to BattleX 🔥</h1>
-        <p class="animated-text">Win real cash via playing mobile Free Fire tournaments!</p>
-        <p class="animated-text">We offer <strong>Solo, Duo, Squad & Custom Rooms</strong> with entry fees ranging from ₹10 to ₹100.</p>
-        <img src="download.png" alt="BattleX Tournament Image"> <!-- Banner image -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="https://api.whatsapp.com/send?phone=7550855283&text=Contact%20for%20help%20">Contact</a>
+        <a href="#">About</a>
+    </div>
+
+    <div class="banner">
+        <h1>🔥 Welcome to BattleX 🔥<br>Win real cash via Free Fire tournaments!</h1>
         <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn">Download Now</a>
-        <p class="animated-text">💬 <strong>24/7 Customer Support</strong> | 💯 <strong>Friendly Experience</strong></p>
     </div>
-    
-    <div class="container">
-        <h2 class="animated-text">App Interface</h2>
-        <p class="animated-text">Check the app interface below to get an idea of the app flow and features.</p>
-        <img src="interface.png" alt="App Interface" class="animated-text"> <!-- Interface Image -->
+
+    <div class="white-section">
+        <h2>App Interface</h2>
+        <p>Check the app interface below to get an idea of the app flow and features.</p>
+        <div class="interface">
+            <img src="interface.png" alt="App Interface">
+        </div>
     </div>
-    
-    <div class="container">
-        <h2 class="animated-text">Features</h2>
-        <div class="animated-text"><img src="rupees.png" alt="Free Contests"><p>Free Contests - Join any contest for free!</p></div>
-        <div class="animated-text"><img src="giftbox.png" alt="Cash Prizes"><p>Cash Prizes - Compete with the best and win real cash.</p></div>
-        <div class="animated-text"><img src="man.png" alt="Gamer Profile"><p>Gamer Profile - Showcase your gaming skills.</p></div>
-        <div class="animated-text"><img src="chart.png" alt="Leader Boards"><p>Leader Boards - Track top players.</p></div>
-        <div class="animated-text"><img src="play.png" alt="Fair Play"><p>Fair Play - No emulators or hackers allowed.</p></div>
-        <div class="animated-text"><img src="share.png" alt="Share & Earn"><p>Share & Earn - Refer friends and earn bonuses.</p></div>
+
+    <div class="features">
+        <div class="feature">
+            <img src="rupees.png" alt="Free Contests">
+            <p>Join contests for free as a launch offer.</p>
+        </div>
+        <div class="feature">
+            <img src="giftbox.png" alt="Cash Prizes">
+            <p>Win exciting cash prizes by competing with top players.</p>
+        </div>
+        <div class="feature">
+            <img src="mans.png" alt="Gamer Profile">
+            <p>Showcase your skills and stats with your gamer profile.</p>
+        </div>
+        <div class="feature">
+            <img src="chart.png" alt="Leader Boards">
+            <p>See who's the best among all pro players.</p>
+        </div>
+        <div class="feature">
+            <img src="play.png" alt="Fair Play">
+            <p>Respect the gaming community with fair rules.</p>
+        </div>
+        <div class="feature">
+            <img src="share.png" alt="Share & Earn">
+            <p>Refer other gamers and earn rewards.</p>
+        </div>
     </div>
+
+    <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn">Download Now</a>
 </body>
 </html>
