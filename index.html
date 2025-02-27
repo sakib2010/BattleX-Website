@@ -12,9 +12,11 @@
             color: white;
             padding: 0;
             margin: 0;
+            width: 100vw;
+            overflow-x: hidden;
         }
         .container {
-            max-width: 1000px;
+            max-width: 100%;
             margin: auto;
             background: #222;
             padding: 20px;
@@ -29,7 +31,7 @@
             font-size: 18px;
             border-radius: 5px;
             margin-top: 10px;
-            box-shadow: 0 0 10px #ff5733;
+            box-shadow: 0px 0px 10px rgba(255, 87, 51, 0.8);
         }
         img {
             max-width: 100%;
@@ -37,94 +39,77 @@
             margin-top: 10px;
         }
         .section {
-            padding: 40px 20px;
+            padding: 20px;
+            background: #fff;
+            color: black;
         }
-        .gray-section {
-            background: #333;
-            padding: 40px 20px;
-            border-radius: 10px;
+        .feature-box {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            text-align: left;
         }
-        .highlight {
-            font-size: 24px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        .icon {
-            width: 80px;
-            height: 80px;
+        .feature-box img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
             border-radius: 50%;
-            box-shadow: 0 0 10px white;
-            margin-bottom: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+        }
+        .how-to-section img {
+            width: 80%;
+            max-width: 300px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="battlex.jpg.webp" alt="BattleX Logo" style="width: 150px;">
-        <nav>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <div class="container">
+        <h1>🔥 Welcome to BattleX 🔥</h1>
+        <p>Join our Free Fire tournaments and win big prizes!</p>
+        <p>We offer <strong>Solo, Duo, Squad & Custom Rooms</strong> with entry fees ranging from ₹10 to ₹100.</p>
+        <img src="battlex.jpg.webp" alt="BattleX Tournament Logo"> 
+        <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn">Download BattleX & Register</a>
+        <p>💬 <strong>24/7 Customer Support</strong> | 💯 <strong>Friendly Experience</strong></p>
+    </div>
     
-    <section class="section">
-        <h1 class="highlight">🔥 Welcome to BattleX 🔥</h1>
-        <p>Win real cash via playing mobile Free Fire tournaments. Download now!</p>
-        <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn">Download Now</a>
-    </section>
-    
-    <section class="gray-section">
-        <h2 class="highlight">App Interface</h2>
+    <div class="section">
+        <h2>App Interface</h2>
         <p>Check the app interface below to get an idea of the app flow and features.</p>
         <img src="interface.png" alt="App Interface">
         <p>The app is easy to use with multiple sections and free contests.</p>
         <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn">Download Now</a>
-    </section>
+    </div>
     
-    <section class="section">
-        <h2 class="highlight">Game Features</h2>
-        <div>
-            <img src="rupees.png" class="icon" alt="Free Contests">
-            <p>Free Contests: Join any contest of your choice for free as a launch offer.</p>
-            
-            <img src="giftbox.png" class="icon" alt="Cash Prizes">
-            <p>Cash Prizes: Compete with the best players in India and win exciting cash prizes.</p>
-            
-            <img src="man.png" class="icon" alt="Gamer Profile">
-            <p>Gamer Profile: Showcase your skills and stats, and be popular in the gaming community.</p>
-            
-            <img src="chart.png" class="icon" alt="Leaderboards">
-            <p>Leaderboards: See who has the guts and skills to top the charts.</p>
-            
-            <img src="play.png" class="icon" alt="Fair Play">
-            <p>Fair Play: No Emulators, No Hackers – play fairly and win!</p>
-            
-            <img src="share.png" class="icon" alt="Share & Earn">
-            <p>Share & Earn: Refer others to play and earn bonuses!</p>
-        </div>
-    </section>
+    <div class="section" style="background: #333; color: white;">
+        <h2>Features</h2>
+        <div class="feature-box"><img src="rupees.png" alt="Free Contests"><p>You can join any contest of your liking and of your desired time for free as a launch offer.</p></div>
+        <div class="feature-box"><img src="giftbox.png" alt="Cash Prizes"><p>Compete with the best players in India and win exciting cash prizes.</p></div>
+        <div class="feature-box"><img src="man.png" alt="Gamer Profile"><p>Showcase your skills and stats with your own gamer profile.</p></div>
+        <div class="feature-box"><img src="chart.png" alt="Leader Boards"><p>Compete with top players and see who has the best skills.</p></div>
+        <div class="feature-box"><img src="play.png" alt="Fair Play"><p>No Emulators, No Hackers - We ensure fair play for all.</p></div>
+        <div class="feature-box"><img src="share.png" alt="Share & Earn"><p>Refer other gamers and earn rewards.</p></div>
+    </div>
     
-    <section class="gray-section">
-        <h2 class="highlight">How to Play</h2>
-        <img src="how to play.png" class="icon" alt="How to Play">
-        <p>Join solo, duo, or squad tournaments and compete for cash prizes up to ₹1000.</p>
-    </section>
+    <div class="how-to-section">
+        <h2>How To Play</h2>
+        <img src="how to play.png" alt="How to Play">
+        <p>Join tournaments in different modes and win prizes up to ₹X.</p>
+    </div>
     
-    <section class="section">
-        <h2 class="highlight">What to Do</h2>
-        <img src="what to do.png" class="icon" alt="What to Do">
-        <p>Register, deposit coins, and start playing Free Fire and BGMI tournaments 24/7.</p>
-    </section>
+    <div class="how-to-section">
+        <h2>What To Do</h2>
+        <img src="what to do.png" alt="What to Do">
+        <p>Create a free account, deposit coins, and start playing.</p>
+    </div>
     
-    <section class="gray-section">
-        <h2 class="highlight">Money Prizes</h2>
-        <img src="money prize.png" class="icon" alt="Money Prizes">
-        <p>Withdraw earnings via Paytm, UPI, PhonePe, or Google Play redeem codes.</p>
-    </section>
+    <div class="how-to-section">
+        <h2>Money Prizes</h2>
+        <img src="money prize.png" alt="Money Prizes">
+        <p>Withdraw your winnings using Paytm, UPI, or Google Play redeem codes.</p>
+    </div>
     
-    <footer>
-        <a href="#contact">Contact Us</a> | <a href="#about">About</a>
+    <div class="container">
         <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn">Download Now</a>
-    </footer>
+    </div>
 </body>
 </html>
