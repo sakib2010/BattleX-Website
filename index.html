@@ -11,26 +11,10 @@
             background-color: #111;
             color: white;
             padding: 20px;
-            margin: 0;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #222;
-            padding: 15px 20px;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-        .navbar a:hover {
-            color: #ff5733;
+            overflow-x: hidden;
         }
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: auto;
             background: #222;
             padding: 20px;
@@ -38,79 +22,65 @@
         }
         .btn {
             display: inline-block;
-            border: 2px solid orange;
-            color: orange;
+            background: transparent;
+            color: white;
             padding: 10px 20px;
             text-decoration: none;
             font-size: 18px;
             border-radius: 5px;
             margin-top: 10px;
-            background: transparent;
-            transition: 0.3s;
+            border: 2px solid orange;
+            transition: transform 0.2s ease-in-out;
         }
         .btn:hover {
-            background: orange;
-            color: white;
-        }
-        .banner {
-            background: url('download.png') center/cover;
-            height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .interface {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            margin: 20px auto;
-            max-width: 800px;
-            position: relative;
-            overflow: hidden;
-        }
-        .interface img {
-            width: 100%;
-            display: block;
-            transform: translateX(100%);
-            animation: slideIn 1s forwards;
-        }
-        @keyframes slideIn {
-            from { transform: translateX(100%); }
-            to { transform: translateX(0); }
-        }
-        .download-btn {
-            transition: transform 0.2s;
-        }
-        .download-btn:active {
             transform: scale(1.1);
         }
-        .footer {
-            background: #222;
-            padding: 15px;
-            text-align: center;
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .animated-text {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <img src="battlex.jpg.webp" alt="BattleX Logo" height="40">
-        <div>
-            <a href="#about">About Us</a>
-            <a href="https://api.whatsapp.com/send?phone=7550855283&text=Contact%20for%20help%20">Contact</a>
-        </div>
+    <div class="container">
+        <h1 class="animated-text">🔥 Welcome to BattleX 🔥</h1>
+        <p class="animated-text">Win real cash via playing mobile Free Fire tournaments!</p>
+        <p class="animated-text">We offer <strong>Solo, Duo, Squad & Custom Rooms</strong> with entry fees ranging from ₹10 to ₹100.</p>
+        <img src="download.png" alt="BattleX Tournament Image"> <!-- Banner image -->
+        <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn">Download Now</a>
+        <p class="animated-text">💬 <strong>24/7 Customer Support</strong> | 💯 <strong>Friendly Experience</strong></p>
     </div>
     
-    <div class="banner">🔥 Welcome to BattleX 🔥</div>
-    
-    <div class="interface">
-        <img src="interface.png" alt="App Interface">
-        <p><strong>BattleX is the best Free Fire tournament app</strong> where you can find low entry fee tournaments and enjoy 24/7 customer support.</p>
-        <p><strong>Download now and get up to ₹100 bonus!</strong></p>
-        <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn download-btn">Download Now</a>
+    <div class="container">
+        <h2 class="animated-text">App Interface</h2>
+        <p class="animated-text">Check the app interface below to get an idea of the app flow and features.</p>
+        <img src="interface.png" alt="App Interface" class="animated-text"> <!-- Interface Image -->
     </div>
     
-    <div class="footer">&copy; 2025 BattleX. All rights reserved.</div>
+    <div class="container">
+        <h2 class="animated-text">Features</h2>
+        <div class="animated-text"><img src="rupees.png" alt="Free Contests"><p>Free Contests - Join any contest for free!</p></div>
+        <div class="animated-text"><img src="giftbox.png" alt="Cash Prizes"><p>Cash Prizes - Compete with the best and win real cash.</p></div>
+        <div class="animated-text"><img src="man.png" alt="Gamer Profile"><p>Gamer Profile - Showcase your gaming skills.</p></div>
+        <div class="animated-text"><img src="chart.png" alt="Leader Boards"><p>Leader Boards - Track top players.</p></div>
+        <div class="animated-text"><img src="play.png" alt="Fair Play"><p>Fair Play - No emulators or hackers allowed.</p></div>
+        <div class="animated-text"><img src="share.png" alt="Share & Earn"><p>Share & Earn - Refer friends and earn bonuses.</p></div>
+    </div>
 </body>
 </html>
