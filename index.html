@@ -2,152 +2,206 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BattleX - Free Fire Tournaments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BattleX - Best Free Fire Tournament App</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: white;
             margin: 0;
             padding: 0;
+            background-color: black;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
         }
-        .container {
-            width: 100%;
-            max-width: 400px;
-            margin: auto;
-            padding: 20px;
-        }
-        .nav {
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #222;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 10px 20px;
-            background: #222;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
-        .nav img {
-            height: 40px;
+        .navbar img {
+            height: 50px;
         }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        /* Banner */
         .banner {
             position: relative;
-            text-align: center;
             background: url('download.png') no-repeat center center/cover;
-            padding: 100px 20px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
         .banner-overlay {
             position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.6);
         }
-        .banner h1 {
+        .banner-content {
             position: relative;
+            z-index: 2;
+        }
+        .banner h1 {
             font-size: 28px;
             font-weight: bold;
-            color: white;
         }
-        .btn {
+        .glow-button {
             display: inline-block;
-            background: orange;
-            color: white;
             padding: 10px 20px;
-            text-decoration: none;
             font-size: 18px;
             font-weight: bold;
+            color: white;
+            background: orange;
+            border: 2px solid orange;
             border-radius: 5px;
-            margin-top: 10px;
+            text-decoration: none;
             box-shadow: 0px 0px 10px orange;
+            transition: transform 0.2s ease-in-out;
         }
-        .section {
-            padding: 40px 20px;
-            text-align: center;
+        .glow-button:hover {
+            transform: scale(1.1);
         }
-        .white-section {
-            background: white;
+
+        /* App Interface Section */
+        .app-interface {
+            background-color: white;
             color: black;
+            padding: 40px 20px;
         }
-        .gray-section {
-            background: #333;
+        .app-interface img {
+            max-width: 100%;
+            height: auto;
+            animation: popIn 1s ease-in-out;
         }
-        .feature {
+        @keyframes popIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Features Section */
+        .features {
+            background-color: #333;
+            padding: 40px 20px;
+        }
+        .feature-item {
             display: flex;
             align-items: center;
-            margin: 20px 0;
+            justify-content: center;
+            margin: 15px 0;
         }
-        .feature img {
+        .feature-item img {
             width: 50px;
             height: 50px;
-            margin-right: 10px;
+            margin-right: 15px;
             border-radius: 50%;
             box-shadow: 0px 0px 10px white;
         }
-        .feature-text {
+        .feature-item p {
             text-align: left;
-            flex: 1;
+            max-width: 250px;
         }
-        .how-to-play {
-            text-align: center;
+
+        /* How To Play, What To Do, Money Prizes */
+        .info-section {
             padding: 40px 20px;
         }
-        .how-to-play img {
-            width: 100px;
+        .info-section img {
+            width: 80px;
             height: auto;
-            margin-bottom: 20px;
+            box-shadow: 0px 0px 15px orange;
         }
+        .info-section p {
+            text-align: left;
+            max-width: 300px;
+            margin: auto;
+            font-size: 14px;
+        }
+
+        /* Footer */
         .footer {
-            background: #222;
-            text-align: center;
             padding: 20px;
+            background: #222;
         }
     </style>
 </head>
 <body>
-    <div class="nav">
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
         <img src="battlex.jpg.webp" alt="BattleX Logo">
-        <a href="https://api.whatsapp.com/send?phone=7550855283&text=Contact%20for%20help%20" class="btn">Contact Us</a>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="https://api.whatsapp.com/send?phone=7550855283&text=Contact%20for%20help">Contact</a>
+        </div>
     </div>
+
+    <!-- Banner -->
     <div class="banner">
         <div class="banner-overlay"></div>
-        <h1>🔥 Welcome to BattleX 🔥</h1>
-        <p>Win real cash via playing Free Fire tournaments! Download now.</p>
-        <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn">Download Now</a>
+        <div class="banner-content">
+            <h1>Welcome to BattleX</h1>
+            <p>Win real cash via playing mobile Free Fire tournaments</p>
+            <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="glow-button">Download Now</a>
+        </div>
     </div>
-    <div class="section white-section">
+
+    <!-- App Interface Section -->
+    <div class="app-interface">
         <h2>App Interface</h2>
         <p>Check the app interface below to get an idea of the app flow and features.</p>
         <img src="interface.png" alt="App Interface">
-        <p>The app is easy to use with multiple sections and free contests.</p>
-        <a href="#" class="btn">Download Now</a>
+        <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="glow-button">Download Now</a>
     </div>
-    <div class="section gray-section">
-        <div class="feature">
+
+    <!-- Features Section -->
+    <div class="features">
+        <div class="feature-item">
             <img src="rupees.png" alt="Free Contests">
-            <div class="feature-text">
-                <h3>Free Contests</h3>
-                <p>You can join any contest of your liking and of your desired time for free as a launch offer.</p>
-            </div>
+            <p>Join any contest of your liking and of your desired time for free as a launch offer.</p>
         </div>
-        <div class="feature">
+        <div class="feature-item">
             <img src="giftbox.png" alt="Cash Prizes">
-            <div class="feature-text">
-                <h3>Cash Prizes</h3>
-                <p>Compete with the best players in India and win exciting cash prizes.</p>
-            </div>
+            <p>Compete with the best players in India and win exciting cash prizes.</p>
         </div>
-        <div class="feature">
-            <img src="chart.png" alt="Leaderboard">
-            <div class="feature-text">
-                <h3>Leaderboard</h3>
-                <p>Check out the leaderboard to see who has the best skills.</p>
-            </div>
+        <div class="feature-item">
+            <img src="mans.png" alt="Gamer Profile">
+            <p>Showcase your skills and stats on your gamer profile and rise in the gaming community.</p>
+        </div>
+        <div class="feature-item">
+            <img src="chart.png" alt="Leader Boards">
+            <p>See who has the best skills with our leaderboard ranking system.</p>
+        </div>
+        <div class="feature-item">
+            <img src="play.png" alt="Fair Play">
+            <p>We ensure fair play. No emulators or hackers allowed.</p>
+        </div>
+        <div class="feature-item">
+            <img src="share.png" alt="Share & Earn">
+            <p>Refer other gamers and earn rewards when they join.</p>
         </div>
     </div>
-     <div class="how-to-section">
+
+    <!-- How To Play Section -->
+    <div class="info-section">
         <h2>How To Play</h2>
         <img src="how to play.png" alt="How to Play">
-        <p>•Solo Mode:.
+       <p>•Solo Mode:.
         <br>•You can join a tournament whatever works for you (modes: Top Position, Most Kills or Damage).
         <br>•Top 10 winners get prizes up to ₹X (depending on match).
         <br>
@@ -157,12 +211,14 @@
              <br>•The top prize is ₹1000.
         
         </p>
+
     </div>
-    
-    <div class="how-to-section">
+
+    <!-- What To Do Section -->
+    <div class="info-section">
         <h2>What To Do</h2>
         <img src="what to do.png" alt="What to Do">
-        <p>Create a free account, deposit coins, and start playing.
+       <p>Create a free account, deposit coins, and start playing.
         <br>•Registration
             <br>•Create a free account on app .
             <br>•Deposit required coins. 
@@ -177,12 +233,14 @@
         
         
         </p>
+
     </div>
-    
-    <div class="how-to-section">
+
+    <!-- Money Prizes Section -->
+    <div class="info-section">
         <h2>Money Prizes</h2>
         <img src="money prize.png" alt="Money Prizes">
-        <p>Withdraw your winnings using Paytm, UPI, or Google Play redeem codes.
+       <p>Withdraw your winnings using Paytm, UPI, or Google Play redeem codes.
          <br>•Once you win your first tournament, you can request your earnings to be withdrawn from your Champions Adda account.
 Its also possible to keep playing to get bigger prizes.
              <br>•Withdraw With
@@ -194,8 +252,12 @@ Its also possible to keep playing to get bigger prizes.
         
         </p>
     </div>
+
+    <!-- Footer -->
     <div class="footer">
-        <a href="#" class="btn">Download Now</a>
+        <p>© 2025 BattleX. All rights reserved.</p>
+        <a href="https://api.whatsapp.com/send?phone=7550855283&text=Contact%20for%20help">Contact Us</a>
     </div>
+
 </body>
 </html>
