@@ -5,146 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BattleX - Free Fire Tournaments</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #111;
             color: white;
-            text-align: center;
+            overflow-x: hidden;
         }
         .navbar {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
             background: #222;
-            padding: 15px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
         }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
+        .navbar img {
+            height: 50px;
         }
         .banner {
+            position: relative;
+            text-align: center;
             background: url('download.png') no-repeat center center/cover;
-            height: 300px;
+            height: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
         }
-        .banner::before {
-            content: "";
+        .banner-overlay {
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100%;
+            height: 100%;
             background: rgba(0, 0, 0, 0.5);
         }
-        .banner h1 {
+        .banner-content {
             position: relative;
-            z-index: 1;
-            font-size: 28px;
+            z-index: 2;
+        }
+        .banner h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .banner p {
+            font-size: 18px;
         }
         .btn {
             display: inline-block;
-            background: transparent;
-            border: 2px solid orange;
+            background: #ff5733;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 20px;
             border-radius: 5px;
-            margin-top: 10px;
+            font-weight: bold;
+            margin-top: 15px;
         }
         .white-section {
             background: white;
             color: black;
             padding: 50px 20px;
+            text-align: center;
         }
-        .interface img {
-            width: 100%;
-            max-width: 400px;
-            animation: slideIn 1s ease-in-out;
+        .white-section h2 {
+            font-size: 32px;
+            font-weight: bold;
         }
-        @keyframes slideIn {
-            from { transform: translateX(100px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+        .white-section img {
+            width: 80%;
+            max-width: 500px;
+            margin-top: 20px;
+            animation: pop-in 1s ease-in-out;
         }
-        .features {
+        .gray-section {
             background: #333;
             padding: 50px 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            text-align: center;
         }
         .feature {
-            width: 300px;
-            margin: 15px;
-            text-align: left;
             display: flex;
             align-items: center;
+            justify-content: center;
+            padding: 15px;
+            gap: 15px;
         }
         .feature img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            margin-right: 10px;
+        }
+        .footer {
+            background: black;
+            text-align: center;
+            padding: 20px;
+        }
+        .footer .btn {
+            animation: pop-in 1s ease-in-out;
+        }
+        @keyframes pop-in {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="#">Home</a>
-        <a href="https://api.whatsapp.com/send?phone=7550855283&text=Contact%20for%20help%20">Contact</a>
-        <a href="#">About</a>
-    </div>
-
+    <nav class="navbar">
+        <img src="battlex.jpg.webp" alt="BattleX Logo">
+    </nav>
     <div class="banner">
-        <h1>🔥 Welcome to BattleX 🔥<br>Win real cash via Free Fire tournaments!</h1>
-        <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn">Download Now</a>
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h1>Welcome to BattleX</h1>
+            <p>Win real cash via playing mobile Free Fire tournaments</p>
+            <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn">Download Now</a>
+        </div>
     </div>
-
     <div class="white-section">
         <h2>App Interface</h2>
         <p>Check the app interface below to get an idea of the app flow and features.</p>
-        <div class="interface">
-            <img src="interface.png" alt="App Interface">
-        </div>
+        <img src="interface.png" alt="App Interface">
     </div>
-
-    <div class="features">
-        <div class="feature">
-            <img src="rupees.png" alt="Free Contests">
-            <p>Join contests for free as a launch offer.</p>
-        </div>
-        <div class="feature">
-            <img src="giftbox.png" alt="Cash Prizes">
-            <p>Win exciting cash prizes by competing with top players.</p>
-        </div>
-        <div class="feature">
-            <img src="mans.png" alt="Gamer Profile">
-            <p>Showcase your skills and stats with your gamer profile.</p>
-        </div>
-        <div class="feature">
-            <img src="chart.png" alt="Leader Boards">
-            <p>See who's the best among all pro players.</p>
-        </div>
-        <div class="feature">
-            <img src="play.png" alt="Fair Play">
-            <p>Respect the gaming community with fair rules.</p>
-        </div>
-        <div class="feature">
-            <img src="share.png" alt="Share & Earn">
-            <p>Refer other gamers and earn rewards.</p>
-        </div>
+    <div class="gray-section">
+        <div class="feature"><img src="rupees.png" alt="Free Contest"> <p>Join contests for free as a launch offer.</p></div>
+        <div class="feature"><img src="giftbox.png" alt="Cash Prize"> <p>Compete with the best players in India and win cash prizes.</p></div>
+        <div class="feature"><img src="mans.png" alt="Gamer Profile"> <p>Showcase your skills and stats on your gamer profile.</p></div>
+        <div class="feature"><img src="chart.png" alt="Leaderboard"> <p>Check out the leaderboards of pro players.</p></div>
+        <div class="feature"><img src="play.png" alt="Fair Play"> <p>No Emulators, No Hackers - Fair Play Only.</p></div>
+        <div class="feature"><img src="share.png" alt="Share & Earn"> <p>Refer others and earn rewards.</p></div>
     </div>
-
-    <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn">Download Now</a>
+    <footer class="footer">
+        <a href="https://api.whatsapp.com/send?phone=7550855283&text=Contact%20for%20help%20" class="btn">Contact Now</a>
+        <a href="https://ga-fs.primexop.com/2252/androidBuilds/battlexV1.apk" class="btn">Download Now</a>
+    </footer>
 </body>
 </html>
